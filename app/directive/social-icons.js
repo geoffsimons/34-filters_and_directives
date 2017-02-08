@@ -18,5 +18,5 @@ module.exports = function() {
 function SocialIconsController($log) {
   $log.debug('SocialIconsController()');
 
-  this.icons = ['twitter', 'fb', 'youtube'];
+  this.icons = ['fb', 'twitter', 'youtube'];
 }

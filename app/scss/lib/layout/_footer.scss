@@ -5,5 +5,22 @@ footer {
   color: $white;
   padding: $gutter-sm / 2;
   font-size: 2vw;
-  text-align: right;
+  display: flex;
+
+  h2 {
+    display: inline-block;
+  }
+  ul {
+    display: inline-block;
+    width: 90px;
+  }
+  li {
+    margin: 0 $gutter-sm / 2;
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+    flex: auto;
+    text-align: right;
+  }
 }
