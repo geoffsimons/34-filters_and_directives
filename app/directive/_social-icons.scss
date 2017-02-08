@@ -1,0 +1,19 @@
+@import "../scss/lib/theme/vars";
+
+.social-icon {
+  display: inline-block;
+  background: white;
+  margin: 0 $gutter-sm;
+  display: inline-block;
+  background-image: url(../../assets/sn-icons.png);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+.twitter {
+  background-position: -104px -1px;
+  background-size: contain;
+}
+.youtube {
+  background-position: -211px 0;
+}
