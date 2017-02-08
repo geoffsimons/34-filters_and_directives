@@ -1,0 +1,21 @@
+@import "../../scss/lib/theme/vars";
+
+.navbar {
+  width: 90%;
+  margin: 0 auto;
+
+  img, h2 {
+    float: left;
+  }
+  h2 {
+    margin-top: 2%;
+    margin-left: 1%;
+  }
+
+  button {
+    margin-top: 1%;
+    float: right;
+    background-color: $white;
+    color: $brand-primary;
+  }
+}

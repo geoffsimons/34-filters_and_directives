@@ -1,0 +1,14 @@
+<section class="gallery-list">
+  <h2>Galleries</h2>
+
+  <gallery-item
+    ng-repeat="gallery in galleryListCtrl.galleries"
+    gallery="gallery"
+    ng-click="galleryListCtrl.currentGallery = gallery">
+  </gallery-item>
+
+  <thumbnail-container ng-if="galleryListCtrl.currentGallery"
+    gallery="galleryListCtrl.currentGallery">
+  </thumbnail-container>
+
+</section>
