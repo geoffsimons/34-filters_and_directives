@@ -2,6 +2,7 @@
 
 module.exports = function() {
   return function(galleries, searchTerm) {
+    if(!searchTerm) return galleries;
     let fuzzyRegex = generateFuzzyRegex(searchTerm);
     return galleries.filter(gallery => {
       return fuzzyRegex.test(gallery.name.toUpperCase());
