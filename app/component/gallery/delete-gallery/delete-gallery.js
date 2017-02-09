@@ -7,26 +7,21 @@ module.exports = {
   controller: ['$log', DeleteGalleryController],
   controllerAs: 'deleteGalleryCtrl',
   bindings: {
-    onConfirm: '&',
-    onCancel: '&'
+    close: '&',
+    dismiss: '&',
   }
 };
 
 function DeleteGalleryController($log) {
   $log.debug('DeleteGalleryController()');
 
-  $log.debug(this);
-  // for(let prop in this) {
-  //   $log.debug(prop, typeof prop);
-  // }
-
   this.confirm = function() {
     $log.debug('confirm...');
-    this.onConfirm();
+    this.close();
   };
 
   this.cancel = function() {
     $log.debug('cancel...');
-    this.onCancel();
+    this.dismiss();
   };
 }

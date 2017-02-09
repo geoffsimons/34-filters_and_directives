@@ -20,36 +20,13 @@ function GalleryItemController($log, $uibModal, galleryService) {
     $log.debug('galleryItemCtrl.delete()');
 
     this.dialog = $uibModal.open({
-      component: 'deleteGallery',
-      // bindings: {
-      //   onConfirm: function() {
-      //     $log.debug('modal got onConfirm');
-      //   },
-      //   onCancel: function() {
-      //     $log.debug('modal got onCancel');
-      //   }
-      // }
-
-      // template: deleteTemplate,
-      // controller: ['$log', function($log) {
-      //   $log.debug('deleteGalleryCtrl()');
-      //
-      //   this.confirm = function() {
-      //     galleryService.deleteGallery(this.gallery);
-      //     this.dialog.close('Yes clicked');
-      //   };
-      //
-      //   this.cancel = function() {
-      //     this.dialog.dismiss('No clicked');
-      //   };
-      // }],
-      // controllerAs: 'deleteGalleryCtrl',
-      // scope: this
+      component: 'deleteGallery'
     });
 
     this.dialog.result
     .then( () => {
       $log.debug('Delete confirmed');
+      galleryService.deleteGallery(this.gallery);
     })
     .catch( () => {
       $log.debug('Delete cancelled');
