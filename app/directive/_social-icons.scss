@@ -7,13 +7,17 @@
   display: inline-block;
   background-image: url(../../assets/sn-icons.png);
   background-repeat: no-repeat;
-  background-size: 591%;
+  background-size: 597%;
   width: 30px;
   height: 30px;
+  border-radius: 5px;
+}
+.fb {
+  background-position: -1px -1px;
 }
 .twitter {
-  background-position: -37px 0px;
+  background-position: -37px -1px;
 }
 .youtube {
-  background-position: -74px 0;
+  background-position: -74px -1px;
 }
