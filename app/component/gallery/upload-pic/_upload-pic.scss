@@ -1,0 +1,34 @@
+@import "../../../scss/lib/theme/vars";
+@import "../../../scss/lib/base/placeholder";
+
+.upload-pic {
+  margin-bottom: $gutter-sm;
+  [placeholder] {
+    @include placeholder(#c9c9c9);
+  }
+  input {
+    background: #888;
+    margin-bottom: $gutter-sm;
+  }
+  .upload-footer {
+    .align-right {
+      float: right;
+    }
+  }
+  .grab-image {
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 1%;
+    margin-right: $gutter-sm;
+    transition: 350ms all;
+
+    &:hover {
+      background: $brand-secondary;
+    }
+
+    &:active {
+      background: $brand-primary;
+      color: $white;
+    }
+  }
+}

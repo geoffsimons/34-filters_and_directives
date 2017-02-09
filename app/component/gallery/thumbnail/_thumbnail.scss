@@ -1,0 +1,25 @@
+@import "../../../scss/lib/theme/vars";
+
+.thumbnail {
+  padding-bottom: $gutter-sm;
+  width: 100%;
+  position: relative;
+  min-height: 50vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: $gutter-sm;
+  .desc {
+    font-size: 4vw;
+    color: $white;
+    position: absolute;
+    bottom: 1vw;
+    right: 2vw;
+    height: 5vw;
+  }
+  button {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+  }
+}

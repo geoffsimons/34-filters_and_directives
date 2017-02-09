@@ -1,0 +1,46 @@
+<section class="landing">
+  <div class="join-container"
+    ng-if="landingCtrl.showSignup">
+    <div class="join-inner">
+      <signup></signup>
+    </div>
+    <div class="join-footer">
+      <p>already a member?</p>
+      <a href="/#/join#login"
+        ng-click="landingCtrl.showSignup=false">
+        sign in here.
+      </a>
+    </div>
+  </div>
+
+  <div class="join-container"
+    ng-if="!landingCtrl.showSignup">
+    <div class="join-inner">
+      <login></login>
+    </div>
+    <div class="join-footer">
+      <p>need to sign up?</p>
+      <a href="/#/join#signup"
+        ng-click="landingCtrl.showSignup=true">
+        sign up here.
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="info-container">
+  <uib-accordion>
+    <p uib-accordion-group class="panel-default" heading="About cfgram">
+      This app is a fun little replica of Instagram. You can create
+      galleries, add pics, and more.
+    </p>
+    <p uib-accordion-group class="panel-default" heading="Contact Us">
+      Come on down to Code Fellows to talk directly with us.
+      You can also email: dev@example.com
+    </p>
+    <p uib-accordion-group class="panel-default" heading="More fun facts">
+      cfgram is built with AngularJS, Webpack, and SCSS. Images are
+      stored on Amazon S3.
+    </p>
+  </uib-accordion>
+</div>

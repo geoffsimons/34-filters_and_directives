@@ -1,0 +1,18 @@
+<section class="gallery-list">
+  <h2>Galleries</h2>
+
+  <input class="search-box"
+    ng-model="galleryListCtrl.searchTerm"
+    type="text" placeholder="search galleries">
+
+  <gallery-item
+    ng-repeat="gallery in galleryListCtrl.galleries | gallerySearch: galleryListCtrl.searchTerm"
+    gallery="gallery"
+    ng-click="galleryListCtrl.currentGallery = gallery">
+  </gallery-item>
+
+  <thumbnail-container ng-if="galleryListCtrl.currentGallery"
+    gallery="galleryListCtrl.currentGallery">
+  </thumbnail-container>
+
+</section>

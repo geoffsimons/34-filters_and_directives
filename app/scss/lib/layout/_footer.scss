@@ -1,0 +1,42 @@
+@import "../theme/vars";
+
+.v-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+footer {
+  height: 7%;
+  background: $brand-primary;
+  color: $white;
+  padding: $gutter-sm / 2;
+  font-size: 2vw;
+
+  .footer-inner {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  ul {
+    @extend .v-align;
+    left: 36%;
+    li {
+      margin: 0 $gutter-sm / 2;
+      display: inline-block;
+    }
+  }
+  span {
+    @extend .v-align;
+    font-size: 2vw;
+  }
+  .connect-label {
+    left: 0%;
+  }
+  .copyright {
+    right: 0%;
+  }
+}

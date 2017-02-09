@@ -1,0 +1,50 @@
+<section class="signup">
+  <h2>sign up.</h2>
+  <form class="signup-form"
+    name="signupForm"
+    ng-submit="signupCtrl.signup()"
+    novalidate>
+    <div
+      ng-classs="{
+        'error': signupForm.username.$invalid,
+        'success': signupForm.username.$valid
+      }">
+      <input type="text"
+        name="username"
+        placeholder="username"
+        ng-minlength="5"
+        ng-model="signupCtrl.user.username"
+        required>
+    </div>
+
+    <div
+      ng-classs="{
+        'error': loginForm.email.$invalid,
+        'success': loginForm.email.$valid
+      }">
+      <input type="email"
+        name="email"
+        placeholder="email"
+        ng-model="signupCtrl.user.email">
+    </div>
+
+    <div
+      ng-class="{
+        'error': loginForm.password.$invalid && loginForm.$submitted,
+        'success': loginForm.password.$valid
+      }">
+      <input type="password"
+        name="password"
+        placeholder="password"
+        ng-minlength="8"
+        ng-model="signupCtrl.user.password"
+        required>
+    </div>
+
+    <button type="submit"
+      ng-disabled="loginForm.username.$invalid || loginForm.password.$invalid">
+      sign up
+    </button>
+    <div class="clear-fix"></div>
+  </form>
+</section>
