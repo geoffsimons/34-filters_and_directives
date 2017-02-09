@@ -10,24 +10,24 @@ describe('Gallery Item Component', function() {
     });
   });
 
-  describe('galleryItemCtrl.delete()', () => {
-    it('should make a valid delete request', () => {
-      let bindings = { gallery: mockGallery() };
-      let url = `${__API_URL__}/api/gallery/${bindings.gallery._id}`;
-      let headers = {
-        Accept: 'application/json',
-        Authorization: 'Bearer test token'
-      };
-
-      this.$httpBackend.expectDELETE(url, headers).respond(204);
-
-      let galleryItemCtrl = this.$componentController('galleryItem', null, bindings);
-      galleryItemCtrl.delete();
-
-      this.$httpBackend.flush();
-      this.$rootScope.$apply();
-    });
-  }); //delete()
+  // describe('galleryItemCtrl.delete()', () => {
+  //   it('should make a valid delete request', () => {
+  //     let bindings = { gallery: mockGallery() };
+  //     let url = `${__API_URL__}/api/gallery/${bindings.gallery._id}`;
+  //     let headers = {
+  //       Accept: 'application/json',
+  //       Authorization: 'Bearer test token'
+  //     };
+  //
+  //     this.$httpBackend.expectDELETE(url, headers).respond(204);
+  //
+  //     let galleryItemCtrl = this.$componentController('galleryItem', null, bindings);
+  //     galleryItemCtrl.delete();
+  //
+  //     this.$httpBackend.flush();
+  //     this.$rootScope.$apply();
+  //   });
+  // }); //delete()
 });
 
 let num = 0;
