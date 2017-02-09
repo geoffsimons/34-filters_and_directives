@@ -20,7 +20,8 @@ function GalleryItemController($log, $uibModal, galleryService) {
     $log.debug('galleryItemCtrl.delete()');
 
     this.dialog = $uibModal.open({
-      component: 'deleteGallery'
+      component: 'deleteGallery',
+      size: 'sm' //Doesn't do anything!?!
     });
 
     this.dialog.result

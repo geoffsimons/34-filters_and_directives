@@ -9,8 +9,9 @@ const pascalcase = require('pascalcase');
 const uiRouter = require('angular-ui-router');
 const uiBootstrap = require('angular-ui-bootstrap');
 const ngFileUpload = require('ng-file-upload');
+const ngAnimate = require('angular-animate');
 
-const cfgram = angular.module('cfgram', [uiRouter, ngFileUpload, uiBootstrap]);
+const cfgram = angular.module('cfgram', [uiRouter, ngFileUpload, ngAnimate, uiBootstrap]);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( key => {
